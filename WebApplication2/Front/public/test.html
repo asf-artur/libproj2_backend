@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .grid-container{
+            background-color: #e9fafa;
+            display: grid;
+            grid-template-columns: 1fr 60vw 1fr;
+            height: 100vh;
+        }
+        .left{
+            background-color: #e0f6ed;
+            /*background-color: #bff6dd;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn1{
+            margin-top: 5vw;
+        }
+        .center{
+            /*background-color: #e9fafa;*/
+            display: flex;
+            flex-direction: column;
+        }
+        .right{
+            /*background-color: #f59999;*/
+        }
+        button{
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 150px;
+            padding: 8px 0;
+            background-color: #81E4E5;
+            border-radius: 5px;
+            border: none;
+            text-decoration: none; /* убирать подчёркивание у ссылок */
+            user-select: none; /* убирать выделение текста */
+            outline: none;
+        }
+        button:hover{
+            background-color: #77bfe7;
+            cursor: pointer;
+        }
+        button:active{
+            background-color: #617cf6;
+        }
+        button[class*="selected"]{
+            background-color: #B64A5F;
+        }
+        button[class*="selected"]:hover{
+            background-color: #c67f8e;
+            cursor: pointer;
+        }
+        button[class*="selected"]:active{
+            background-color: #d02142;
+        }
+        .content{
+            margin-left: 5vw;
+        }
+        .profile_info{
+            margin-top: 5vw;
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+        .profile_info > img{
+            height: 100%;
+        }
+        .info{
+            height: 100%;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .info *{
+            margin-top: 10px;
+        }
+        input{
+            padding: 7px 0;
+            background-color: white;
+            border: 1px solid #676767;
+        }
+        .login_form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .login_form *{
+            margin-bottom: 10px;
+        }
+        .list{
+            background-color: #efa9b7;
+            min-height: 100px;
+            border-radius: 5px;
+        }
+        .incorrect{
+            animation: incorrectAnimation 2s;
+        }
+        @keyframes incorrectAnimation {
+            from{
+                background-color: #ffb2c2;
+                color: #e9fafa;
+                caret-color: #e9fafa;
+            }
+            to{
+                background-color: white;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="a"></div>
+<div class="grid-container">
+    <div class="item left">
+        <button class="selected btn1">Профиль</button>
+        <button>События с книгами</button>
+    </div>
+    <div class="item center">
+        <div class="content">
+            <div class="profile_info">
+                <img src="../src/assets/user.svg" alt="">
+                <div class="info">
+                    <div>Имя Фамилия</div>
+                    <div>01234567890</div>
+                </div>
+            </div>
+            <br>
+            <div class="login_form">
+                <input class="incorrect" type="text" name="login" placeholder="логин"/>
+                <input type="password" name="passwrd" placeholder="пароль"/>
+                <button>войти</button>
+            </div>
+            <div class="list">
+                <div>Пользователь 0 взял книгу 0</div>
+                <div>Пользователь 0 взял книгу 0</div>
+            </div>
+        </div>
+    </div>
+    <div class="item right"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="2.0.90" />
+      <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+      <PackageReference Include="FirebaseAdmin" Version="2.1.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="Npgsql" Version="5.0.5" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.5" />
+      <PackageReference Include="Selenium.Support" Version="4.0.0-beta2" />
+      <PackageReference Include="Selenium.WebDriver" Version="4.0.0-beta2" />
+    </ItemGroup>
+
+</Project>
